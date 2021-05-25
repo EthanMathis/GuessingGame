@@ -11,7 +11,18 @@ void Main()
 void Guess()
 {
     Console.WriteLine("I'm thinking of a number.... Want to guess what it is?");
+
     string Guess = Console.ReadLine();
     int GuessNum = int.Parse(Guess);
-    Console.WriteLine($"You guessed {GuessNum}");
+
+    int SecretNumber = 42;
+
+    if (GuessNum == SecretNumber)
+    {
+        Console.WriteLine("THATS IT!!! How did you know?");
+    }
+    else
+    {
+        Console.WriteLine("Nope. Not even close.");
+    }
 }
